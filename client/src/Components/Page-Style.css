@@ -1,9 +1,14 @@
+* {
+    background-color: darkslategray;
+}
+
+/* HEADER */
+
 .header {
     border-bottom: 2px solid beige;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: darkslategrey;
 }
 
 .header-selectable {
@@ -13,7 +18,7 @@
     padding: 0 20px;
 }
 
-.header-selectable:hover {
+.header-selectable:hover, .header-selectable:hover > p {
     background-color: gray;
 }
 
@@ -21,8 +26,22 @@ p {
     font-size: larger;
 }
 
-.on {
+.on, .on > p {
     background-color: cadetblue;
 }
 
+/* PAGE DEFAULTS */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    align-items: center;
+}
+
+/* CREATE PAGE */
+
+.create {
+    
+}
 

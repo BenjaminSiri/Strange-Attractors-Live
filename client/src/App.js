@@ -1,4 +1,3 @@
-import './App.css';
 import Create from './Components/Create.js'
 import View from './Components/View.js'
 import Root from './Components/Root.js'

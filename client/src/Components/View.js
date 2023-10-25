@@ -1,10 +1,14 @@
+import './Page-Style.css';
+
 import React from 'react';
 
 function View(){
     return(
-        <div>
-            <h1>VIEWING</h1>
-        </div>
+        <>
+            <div className='content'>
+                <h1>View</h1>
+            </div>
+        </>
     )
 }
 

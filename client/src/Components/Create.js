@@ -1,3 +1,4 @@
+import './Page-Style.css';
 
 import React, { useEffect, useState } from 'react';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Dot } from 'recharts';
@@ -96,7 +97,19 @@ function Create() {
   }
 
   return (
-    <h1>CREATING</h1>
+    <>
+      <div className='content'>
+        <h1>Create</h1>
+        <div className='create'>
+          <ScatterChart width={900} height={500}>
+            <CartesianGrid fill="black" horizontal={false} vertical={false} />
+            <XAxis type="number" dataKey="x" stroke="black" tick={true} />
+            <YAxis type="number" dataKey="y" stroke="black" tick={true} />
+            <Scatter data={data} fill="white" line={false} shape={<Dot r={1} />} />
+          </ScatterChart>
+        </div>
+      </div>
+    </>
   );
 
 }
