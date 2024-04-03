@@ -1,6 +1,6 @@
-import Create from './Components/Create.js'
-import View from './Components/View.js'
-import Root from './Components/Root.js'
+import Create from './Components/Create'
+import View from './Components/View'
+import Root from './Components/Root'
 
 
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
