@@ -1,10 +1,7 @@
-* {
-    background-color: darkslategray;
-}
-
 /* HEADER */
 
 .header {
+    background-color: darkslategray;
     border-bottom: 2px solid beige;
     display: flex;
     flex-direction: row;
@@ -33,15 +30,28 @@ p {
 /* PAGE DEFAULTS */
 
 .content {
+    background-color: darkslategray;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     align-items: center;
 }
 
 /* CREATE PAGE */
 
 .create {
-    
+    background-color: black;
+}
+
+.createButton {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.createButton:hover, .createButton:hover > * {
+    background-color: gray;
+}
+.createButton > * {
+    color: white;
 }
 

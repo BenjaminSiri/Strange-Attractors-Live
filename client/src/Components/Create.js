@@ -8,11 +8,12 @@ function Create() {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => { 
-    document.title='Str-Attr';
-    SearchAttractors(0);
-  }, [])
-
+  useEffect(() => {
+    if (data.length > 0) {
+      const firstElement = data[0];
+      console.log(`x: ${firstElement.x}, y: ${firstElement.y}`);
+    }
+  }, [data]);
 
   function SearchAttractors(n=1){
     let found = 0;
@@ -93,6 +94,7 @@ function Create() {
         console.log(dataTemp);
       }
     }
+
     return a;
   }
 
@@ -101,12 +103,15 @@ function Create() {
       <div className='content'>
         <h1>Create</h1>
         <div className='create'>
-          <ScatterChart width={900} height={500}>
+          <ScatterChart width={900} height={500} isAnimationActive={false}>
             <CartesianGrid fill="black" horizontal={false} vertical={false} />
             <XAxis type="number" dataKey="x" stroke="black" tick={true} />
             <YAxis type="number" dataKey="y" stroke="black" tick={true} />
             <Scatter data={data} fill="white" line={false} shape={<Dot r={1} />} />
           </ScatterChart>
+        </div>
+        <div className='createButton' onClick={() => {console.log(SearchAttractors())}}>
+          <h2>Generate!</h2>
         </div>
       </div>
     </>
